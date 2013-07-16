@@ -1,13 +1,23 @@
 {
-    "name": "My First Extension",
+    "name": "Pomodoro with Inagawa",
     "version": "0.1",
     "manifest_version": 2,
     
-    "description": "はじめての拡張！",
-    
+    "description": "集中力の向こう側に広がる世界を見てみないか？",
+    "icons": { "48": "icon48.png"},
     "browser_action": {
         "default_icon": "icon19.png",
-        "default_title": "My First Extension",
+        "default_title": "Pomodoro with Inagawa",
         "default_popup": "popup.html"
-    }
+    },
+        "permissions": [
+        "tabs", "http://*/*"
+    ],
+        
+    "content_scripts": [
+        {
+            "matches": ["http://www.facebook.com/*","https://github.com/*","https://twitter.com/*"],
+            "js": ["myscript.js"]
+        }
+    ]
 }

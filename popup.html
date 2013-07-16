@@ -5,37 +5,15 @@
     <script type="text/javascript" src="http://www.youtube.com/iframe_api"></script>
     <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
     <script type="text/javascript" src="popup.js"></script>
-	 <script type="text/javascript">
-	$(function() {
-		countDown();
-		alert('a');
-	 });
-	 
-	 function countDown() {
-	 	var startTime = new Date();
-	 	//カウントダウンの終了期日を記入↓
-	    var endTime = new Date('December 24,2012, 01:00:00');
-	    var diff  = endTime - startTime;
-	    var times = 24 * 60 * 60 * 1000;
-	    var day   = Math.floor(diff / times)
-	    var hour  = Math.floor(diff % times / (60 * 60 * 1000))
-	    var min   = Math.floor(diff % times / (60 * 1000)) % 60
-	    var sec   = Math.floor(diff % times / 1000) % 60 % 60
-	    var ms    = Math.floor(diff % times / 10) % 100
-	    if(diff > 0){
-	    	$("#Timer").text(day + '日' + hour + '時間' + min + '分' + sec +'秒' + ms);
-	    	setTimeout('countDown()', 10);
-	    } else {
-	    	//終了した時のテキスト
-	    	$("#Timer").text('終了しました！');
-	    }
-	 }
-	</script>
+
 </head>
 <body style="min-width:250px">
 	<div id="Timer"></div>
-<!-- <iframe width="420" height="315" src="http://www.youtube.com/embed/2SqNDSqUaVM" frameborder="0" allowfullscreen></iframe> -->
+<iframe width="420" height="315" src="http://www.youtube.com/embed/tVioZQoOKSY" frameborder="0" allowfullscreen></iframe>
 
-<object type="application/x-shockwave-flash" id="player" data="http://www.youtube.com/v/gi39nqZRooY?enablejsapi=1&amp;autoplay=1&amp;playerapiid=player" width="854" height="480"><param name="allowScriptAccess" value="always"></object>
+
+
+
+<!-- <object type="application/x-shockwave-flash" id="player" data="http://www.youtube.com/v/gi39nqZRooY?enablejsapi=1&amp;autoplay=1&amp;playerapiid=player" width="854" height="480"><param name="allowScriptAccess" value="always"></object> -->
 </body>
 </html>
